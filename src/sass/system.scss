@@ -1,0 +1,30 @@
+@import "global_constants";
+
+/**
+ * 
+ * Arquivo específico para manter todos os estilos utilizados dentro da aplicação.
+ * 
+ */
+/* system variables */
+@import "system/variables";
+
+/* mixins */
+@import "mixins/mixins";
+
+/* vendors */
+@import "vendors/font-awesome";
+
+/* utilities files */
+@import "system/utilities";
+@import "system/tooltip";
+@import "system/tips";
+@import "system/anchors";
+@import "system/inputs";
+@import "system/buttons";
+@import "system/modal";
+
+@import "system/defaults";
+
+@import "system/cart";
+@import "system/identification";
+@import "system/payment";

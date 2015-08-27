@@ -1,0 +1,123 @@
+$button-color-default: #3f3f3f;
+$button-color-primary: #4f8fc0;
+$button-color-sucess: #4cae4c;
+$button-color-info: #46b8da;
+$button-color-warning: #eea236;
+$button-color-danger: #ec1e24;
+$button-color-back: #000;
+
+$button-color-shadow 		: #ededed;
+$button-width-shadow 		: 3px;
+$button-radius 				: $default-radius;
+
+$button-height 				: 48px;
+$button-gp2-height 			: 30px;
+
+button{
+  outline: none;
+}
+.button_type{
+	border:0;
+	color:#FFF;
+	height: $button-height	;
+	border:1px solid #FFF;
+	cursor: pointer;
+	text-align:center;
+	border-radius:$button-radius;
+	text-decoration:none;
+	//vertical-align: middle;
+  	//display: table-cell;
+  	display: inline-block;
+  	padding: 15px 8px;
+  	margin: 0 4px;
+
+	box-shadow: (0px - $button-width-shadow) 	(0px - $button-width-shadow) 1px $button-color-shadow, 
+			 	 $button-width-shadow 			(0px - $button-width-shadow) 1px $button-color-shadow,
+				 $button-width-shadow  			$button-width-shadow 		1px $button-color-shadow,
+				(0px - $button-width-shadow)  	$button-width-shadow 		1px $button-color-shadow;
+
+	&[disabled],
+	&[readonly],
+	[disabled] &{
+		cursor:not-allowed;
+	}
+}
+.button{
+	@extend .button_type;
+}
+.button.gp2{
+	height: $button-gp2-height;
+	padding: 7px 8px;
+}
+.button-{
+	&default{
+		background-color:$button-color-default;
+		border-color:darken($button-color-default, 11%);
+		&:hover, &:focus{
+			background:linear-gradient(to bottom, $button-color-default, darken($button-color-default, 10%));
+		}
+		&:active{
+			background:darken($button-color-default, 10%);
+		}
+	}
+	&primary{
+		background-color:$button-color-primary;
+		border-color:darken($button-color-primary, 11%);
+		&:hover, &:focus{
+			background:linear-gradient(to bottom, $button-color-primary, darken($button-color-primary, 10%));
+		}
+		&:active{
+			background:darken($button-color-primary, 10%);
+		}
+	}
+	&sucess{
+		background-color:$button-color-sucess;
+		border-color:darken($button-color-sucess, 11%);
+		&:hover, &:focus{
+			background:linear-gradient(to bottom, $button-color-sucess, darken($button-color-sucess, 10%));
+		}
+		&:active{
+			background:darken($button-color-sucess, 10%);
+		}
+	}
+	&info{
+		background-color:$button-color-info;
+		border-color:darken($button-color-info, 11%);
+		&:hover, &:focus{
+			background:linear-gradient(to bottom, $button-color-info, darken($button-color-info, 10%));
+		}
+		&:active{
+			background:darken($button-color-info, 10%);
+		}
+	}
+	&warning{
+		background-color:$button-color-warning;
+		border-color:darken($button-color-warning, 11%);
+		&:hover, &:focus{
+			background:linear-gradient(to bottom, $button-color-warning, darken($button-color-warning, 10%));
+		}
+		&:active{
+			background:darken($button-color-warning, 10%);
+		}
+	}
+	&danger{
+		background-color:$button-color-danger;
+		border-color:darken($button-color-danger, 11%);
+		&:hover, &:focus{
+			background:linear-gradient(to bottom, $button-color-danger, darken($button-color-danger, 10%));
+		}
+		&:active{
+			background:darken($button-color-danger, 10%);
+		}
+	}
+	&black{
+		background-color:$button-color-back;
+		border-color:lighten($button-color-back, 21%);
+		&:hover, &:focus{
+			background:linear-gradient(to bottom, $button-color-back, lighten($button-color-back, 20%));
+		}
+		&:active{
+			background:lighten($button-color-back, 20%);
+		}
+	}
+}

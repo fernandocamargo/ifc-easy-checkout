@@ -1,0 +1,21 @@
+@import "global_constants";
+/**
+ *
+ *	Arquivo específico para elementos que devem ser carregados primeiramente. Para adiantar a primeira renderização do conteúdo.
+ *	Neste arquivo devem ser mantidos apenas os elementos essenciais, como header, footer e conteúdos de preload usados para mostrar a primeira impressão ao usuário
+ * 
+ */
+/* system variables */
+@import "system/variables";
+
+/* reset files */
+@import "system/system-first-load/reset";
+
+@import "mixins/mixins";
+
+
+/* includes layouts parts*/
+@import "system/system-first-load/preloader";
+@import "system/system-first-load/common";
+@import "system/system-first-load/header";
+@import "system/system-first-load/footer";

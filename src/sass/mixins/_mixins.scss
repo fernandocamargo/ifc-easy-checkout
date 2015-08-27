@@ -1,0 +1,35 @@
+
+
+%mixin font-smoothing{
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+@import "clearfix";
+@import "hide-text";
+@import "opacity";
+@import "border-radius";
+@import "buttons";
+@import "inputs";
+@import "center-block";
+@import "include-media";
+@import "grid-framework";
+
+@debug "Criando grids: "+$grid-columns+" colunas";
+@include loop-grid-columns-mixin($grid-columns, "", "width");
+
+
+@include media("<=1024px") {
+	@include loop-grid-columns-mixin($grid-columns, "-1024px", "width");
+}
+@include media("<=768px") {
+	@include loop-grid-columns-mixin($grid-columns, "-768px", "width");
+}
+@include media("<=640px") {
+	@include loop-grid-columns-mixin($grid-columns, "-640px", "width");
+}
+@include media("<=320px") {
+	@include loop-grid-columns-mixin($grid-columns, "-320px", "width");
+}
+

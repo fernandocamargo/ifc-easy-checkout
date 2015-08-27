@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "TradeGothic";
+    src: url($FONT_PATH + "tradegothic_lt_boldcondtwenty.eot?iefix");
+	src: local("?"),
+	url($FONT_PATH + "tradegothic_lt_boldcondtwenty.eot?iefix") format("embedded-opentype"), 
+	url($FONT_PATH + "trade_gothic_lt_bold_condensed_no_20.woff") format("woff"), 
+	url($FONT_PATH + "tradegothic_lt_boldcondtwenty.ttf") format("truetype"), 
+	url($FONT_PATH + "tradegothic_lt_boldcondtwenty.svg#TradeGothicLT-BoldCondTwenty") format("svg");
+}
+@font-face {
+    font-family: "trade_gothic_lt_bold_condensed";
+	src: url($FONT_PATH + "tradegothic_lt_boldcondtwenty.eot?iefix");
+	src: local("?"),
+	url($FONT_PATH + "tradegothic_lt_boldcondtwenty.svg#TradeGothicLT-BoldCondTwenty") format("svg"),
+	url($FONT_PATH + "tradegothic_lt_boldcondtwenty.woff") format("woff"),	
+	url($FONT_PATH + "tradegothic_lt_boldcondtwenty.ttf") format("truetype");
+}
+@font-face {
+    font-family: "TradeGothicBold";
+    font-style: normal;
+    font-weight: normal;
+    src: url($FONT_PATH + "tradegothic-bold-webfont.eot?#iefix");
+	src:  local("?"), 
+	url($FONT_PATH + "tradegothic-bold-webfont.eot?#iefix") format("embedded-opentype"), 
+	url($FONT_PATH + "tradegothic-bold-webfont.woff") format("woff"),
+	url($FONT_PATH + "tradegothic-bold-webfont.ttf") format("truetype"), 
+	url($FONT_PATH + "tradegothic-bold-webfont.svg#TradeGothicBold") format("svg");
+}
+@font-face {
+    font-family: "TradeGothicCondensedNo.18Rg";
+    font-style: normal;
+    font-weight: normal;
+    src: url($FONT_PATH + "tradegothic-condeighteen-webfont.eot?#iefix");
+	src: local("?"), 
+	url($FONT_PATH + "tradegothic-condeighteen-webfont.eot?#iefix") format("embedded-opentype"), 
+	url($FONT_PATH + "tradegothic-condeighteen-webfont.woff") format("woff"), 
+	url($FONT_PATH + "tradegothic-condeighteen-webfont.ttf") format("truetype"), 
+	url($FONT_PATH + "tradegothic-condeighteen-webfont.svg#TradeGothicCondensedNo.18Rg") format("svg");
+}
+@font-face {
+    font-family: "TradeGothicRegular";
+    font-style: normal;
+    font-weight: normal;
+	src: url($FONT_PATH + "tradegothic-light-webfont.eot?#iefix");
+    src: local("?"),
+	url($FONT_PATH + "tradegothic-light-webfont.eot?#iefix") format("embedded-opentype"), 
+	url($FONT_PATH + "tradegothic-light-webfont.woff") format("woff"), 
+	url($FONT_PATH + "tradegothic-light-webfont.ttf") format("truetype"), 
+	url($FONT_PATH + "tradegothic-light-webfont.svg#TradeGothicRegular") format("svg");
+}
+@font-face {
+    font-family: "TradeGothicLTStdRegular";
+    font-style: normal;
+    font-weight: normal;
+	src: url($FONT_PATH + "tradegothicltstd-webfont.eot?#iefix");
+    src: local("?"),
+	url($FONT_PATH + "tradegothicltstd-webfont.eot?#iefix") format("embedded-opentype"), 
+	url($FONT_PATH + "tradegothicltstd-webfont.woff") format("woff"), 
+	url($FONT_PATH + "tradegothicltstd-webfont.ttf") format("truetype"), 
+	url($FONT_PATH + "tradegothicltstd-webfont.svg#TradeGothicLTStdRegular") format("svg");
+}
+@font-face {
+    font-family: "TradeGothicLTStdBoldRegular";
+    font-style: normal;
+    font-weight: normal;
+	src: url($FONT_PATH + "tradegothicltstd-bold-webfont.eot?#iefix");
+	src: local("?"),
+	url($FONT_PATH + "tradegothicltstd-bold-webfont.eot?#iefix") format("embedded-opentype"), 
+	url($FONT_PATH + "tradegothicltstd-bold-webfont.woff") format("woff"), 
+	url($FONT_PATH + "tradegothicltstd-bold-webfont.ttf") format("truetype"), 
+	url($FONT_PATH + "tradegothicltstd-bold-webfont.svg#TradeGothicLTStdBoldRegular") format("svg");
+}

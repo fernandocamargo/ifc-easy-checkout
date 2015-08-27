@@ -1,0 +1,590 @@
+.step.alias-auth{
+	width: 350px;
+	color:#3c3c3c;
+	margin-left:0 - $default-radius;
+	position: relative;
+	z-index: 2;
+
+	&, .fieldset{
+		color: #686868;
+	}
+
+	> .content{
+		border:1px solid $border-color-box-default;
+		border-radius:$default-radius;
+		background:#FFF;
+		width: 100%;
+		padding:15px;
+		position: relative;
+
+		&:before, &:after{
+			content: "";
+			position: absolute;
+			z-index: -2;
+		}
+
+		&:before{
+			top: 10px;
+			bottom: 10px;
+			left: 0;
+			right: 50%;
+			-webkit-box-shadow:0 0 8px rgba(0, 0, 0, 0.5);;
+			-moz-box-shadow:0 0 8px rgba(0, 0, 0, 0.5);;
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);;
+			-moz-border-radius: 10px / 100px;
+			border-radius: 10px / 100px;
+		}
+
+	}
+	> .title{
+		font-size: 20px;
+		padding: 14px 0;
+	}
+
+	.form{
+		padding:15px;
+		overflow: hidden;
+
+		.input.type-text,
+		.input.type-email{
+			width: 100%;
+		}
+		.input.type-submit{
+			@extend .button;
+			@extend .button.gp2;
+			@extend .button-sucess;
+		}
+		.definition.control{
+			
+			> .title{
+				padding-bottom: 4px;
+				width: 100%;
+			}
+		}
+		.control{
+			&.definition,
+			&.quote{
+				margin-top: 12px;
+				width: 100%;
+				float:left;
+
+				> .title{
+					font-weight: 700;
+					padding-bottom:5px;
+				}
+
+				&:first-child{
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	.anchor{
+		@extend .anchor-primary;
+	}
+	.paragraph.subtitle{
+		font-size: 13px;
+		font-weight: 700;
+		padding: 24px 0 24px 15px;
+		border-bottom: 1px solid #F1F1F1;
+	}
+	
+	.paragraph.auth-submit{
+		padding: 10px 16px 10px 10px
+	}
+	.anchor.auth-submit{
+		width: 100%;
+		font-size: 18px;
+		line-height: 18px;
+		@extend .button;
+		@extend .button-sucess;
+
+		&.disabled-true{
+			display: none;
+		}
+
+		.fragment{
+			&:after{
+				@extend .fa;
+				@extend %fa-caret-right:before;
+				font-size: 15px;
+				padding-left: 8px;
+			}
+		}
+	}
+}
+.form.name-widget-auth-login{
+	background:#fafafa;
+	
+	&.visible-false{
+		display:none;
+	}
+	> .fieldset{
+		> .title{
+			font-size: 13px;
+		}
+	}
+	&.disabled-true{
+		.definition.control,
+		.paragraph.control, 
+		.navigation.menu{
+			display:none;
+		}
+	}
+	&.disabled-false{
+		> .fieldset{
+			> .title{
+				display:none;
+			}
+		}
+	}
+	.definition.control{
+		&.name-password{
+			width: 42%;
+		}
+	}
+	.control.type-submit{
+		width: 40%;
+		float: left;
+		margin-top: 31px;
+		margin-left: 12px;
+		padding-bottom: 1px;
+
+
+		.input{
+			text-transform: uppercase;
+			width: auto;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	.navigation.menu{
+		float: left;
+		margin: 12px 0 0;
+
+		.title{
+			display:none;
+		}
+	}
+}
+.form.name-widget-auth-rememberpass{
+	background:#fafafa;
+
+	&.disabled-true{
+		display:none;
+	}
+	> .fieldset{
+		> .title{
+			display:none;
+		}
+	}
+
+	.control.type-submit{
+		width: 55%;
+		float: left;
+		margin-top: 12px;
+  		margin-left: -4px;
+
+		.input{
+			text-transform: uppercase;
+			width: auto;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	.alias-back,
+	.alias-rememberpassword{
+		margin-top: 8px;
+	}	
+	.name-login{
+		.title{
+			padding-bottom:2px;
+		}
+	}
+	.navigation.menu{
+		float: left;
+		margin: 12px 0 0;
+
+		.title{
+			display:none;
+		}
+	}
+	.alias-remember-pass{
+		&.visible-false{
+			.name-login,
+			.name-submit{
+				display:none;
+			}
+			.menu.alias-action{
+				margin-top: 5px;
+			}
+			.alias-back{
+				margin:0;
+				.anchor{
+					margin: 0;
+					@extend .button;
+					@extend .button.gp2;
+					@extend .button-sucess;
+				}
+			}
+		}
+	}
+	.alias-remember-pass-success{
+		display:none;
+		&.visible-true{
+			display:block;
+		}
+		> .title{
+			display:block;
+			font-size: 16px;
+			color:#000000;
+			font-weight: 700;
+		}
+		> .paragraph{
+			color:#3c3c3c;
+			font-size:13px;
+			padding:13px 0;
+		}
+	}
+}
+.form.name-widget-auth-user{
+
+	.definition.control{
+		&.name-email{
+			.input{
+				text-indent: 10px;
+			}
+		}
+		&.name-cpf,
+		&.name-phone,
+		&.name-birthdate{
+			width: 47%;
+			.input{
+				text-indent: 10px;
+			}
+		}
+		&.name-phone{
+			float:right;
+		}		
+	}
+	
+	.control.quote{
+		&.name-newsletter{
+			margin: 6px 0 4px -3px;
+		}
+	}
+
+	.fieldset.alias-user{
+		padding-bottom:10px;
+	}
+}
+.alias-user-address-selected{
+	line-height: 16px;
+}
+.form.name-widget-auth-address{
+	> .title{
+		display:none;
+	}
+	.menu{
+		&.alias-options-postalcode{
+			.title{
+				display: none;
+			}
+			.alias-external{
+				float: left;
+				margin: 0 0 0 6%;
+				padding-top: 8px;
+			}
+			.alias-insert-adress-manually{
+				display:none;
+				float: left;
+				margin: 7px 0 0 0;
+				clear: left;
+			}
+		}
+	}
+	.definition.control{
+		&.name-cep{
+			clear:left;
+
+			> .description > .control{
+				width: 47%;
+				float: left;
+			}
+		}
+		&.name-addressnumber{
+			width: 18%;
+			.input{
+				text-indent:4px;
+			}
+		}
+		&.name-complement{
+			width: 50%;
+			margin-left:4%;
+			.input{
+				text-indent:5px;
+			}
+		}
+		&.name-country{
+			display:none;
+		}
+		&.name-state{
+			width: 18%;
+			clear: left;
+		}
+		&.name-city{
+			width: 38%;
+			margin-left: 4%;
+		}
+		&.name-neighborhood{
+			width: 36%;
+			margin-left: 4%;
+		}
+	}
+
+	.paragraph.address-submit{
+		margin-top: 24px;
+		width: 100%;
+		float: left;
+	}
+	.anchor.address-submit {
+		@extend .button;
+		@extend .button-sucess;
+		width: 100%;
+		margin: 0;
+	}
+
+	.paragraph.adressinline{
+		display:none;
+		padding:5px 0 0;
+		font-size: 13px;
+		line-height: 16px;
+
+		.address{
+			clear: both;
+			display: block;
+		}
+		.anchor{
+			clear: both;
+			display: block;
+			margin-top: 2px;
+			font-size: 12px;
+		}
+	}
+	.address-submit{
+		display:none;
+	}
+	&.insert-adress-{
+		&none{
+			.menu.alias-options-postalcode .alias-insert-adress-manually,
+			.name-cep, 
+			.name-address, 
+			.name-state,
+			.name-city,
+			.name-neighborhood,
+			.name-addressnumber,
+			.name-complement{
+				display:none;
+			}
+		}
+		&waiting,
+		&waitingnewaddress{
+			.menu.alias-options-postalcode .alias-insert-adress-manually,
+			.name-address, 
+			.name-state,
+			.name-city,
+			.name-neighborhood,
+			.name-addressnumber,
+			.name-complement{
+				display:none;
+			}
+		}
+
+		&auto,
+		&autonewaddress{
+			.paragraph.adressinline{
+				display:block;
+			}
+			.name-address .title,
+			.name-address .paragraph.control, 
+			.name-state,
+			.name-city,
+			.name-neighborhood{
+				display:none;
+			}
+		}
+		&allowed,
+		&allowednewaddress{
+			.menu.alias-options-postalcode .alias-insert-adress-manually{
+				display:block;	
+			}
+			> .paragraph.adressinline,
+			.name-address .title,
+			.name-address .paragraph.control, 
+			.name-state,
+			.name-city,
+			.name-neighborhood,
+			.name-addressnumber,
+			.name-complement{
+				display:none;
+			}
+		}
+		&manual,
+		&manualnewaddress,
+		&automanual,
+		&automanualnewaddress,
+		&change{
+			.paragraph.adressinline{
+				display:none;
+			}
+		}
+		&change,
+		&autonewaddress,
+		&automanualnewaddress{
+			.address-submit{
+				display: block;
+			}
+		}
+	}
+	.alias-user-address-selected{
+		.paragraph.title{
+			font-weight:700;
+			padding-bottom:3px;
+		}
+		.paragraph{
+			&.addressnr,
+			&.recipientnm,
+			&.quarter,
+			&.city,
+			&.state,
+			&.postalcdformatted,
+			&.additionalinfo
+			{
+				display:inline;
+				float:left;
+				margin-right: 3px;
+
+
+			}
+
+			&.city{
+				clear: left;
+			}
+		}
+	}
+	.alias-options-selected-address{
+		margin-top:3px;
+		float: left;
+		.item{
+			display:inline;
+			border-right:1px solid #c2c2c2;
+			padding:0 6px;
+
+			&.disabled-true{
+				display:none;
+			}
+
+			&:first-child{
+				padding-left:0;
+			}
+			&:last-child{
+				border:0;
+			}
+		}
+	}
+}
+
+.alias-user-authenticated{
+	color:#686868;
+	padding: 10px 15px;
+
+	> .paragraph.title{
+		font-size:17px;
+		padding-bottom: 15px;
+		//font-weight: 700;
+		//-webkit-font-smoothing: antialiased;
+	}
+	.alias-details{
+		.definition{
+			margin-bottom: 2px;
+		}
+		.title, 
+		.description{
+			display:inline;
+		}
+		.title{
+			font-weight: 700;
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+	.alias-user-details-options{
+		padding-top:3px;
+		.title{
+			display:none;
+		}
+	}
+}
+
+.form.name-widget-auth-shipping{
+	&.visible-false{
+		display: none;
+	}
+	&.disabled-true{
+		.alias-shipping-form-select{
+			display: none;
+		}
+	}
+	&.disabled-false{
+		.alias-shipping-selected{
+			display: none;
+		}
+	}
+	.alias-shipping-details-options{
+		margin-top: 3px;
+		clear:both;
+		.title{
+			display: none;
+		}
+		.alias-change{
+			&.disabled-true{
+				display: none;
+			}
+		}
+	}
+	.alias-shipping-selected,
+	.alias-shipping-form-select{
+		.paragraph{
+			&.title{
+				font-weight: 700;
+				padding-bottom: 3px;
+			}
+		}
+	}
+	.alias-shipping-selected{
+		.definition{
+			margin-right:3px;
+		}
+		.definition, .description{
+			display: inline;
+		}
+		.alias-friendlyname, 
+		.alias-deliverytime,
+		.alias-value{
+			.title{
+				display: none;
+			}
+		}
+	}
+	.name-deliverytype{
+		.label{
+			&:hover{
+				text-shadow: 0 0 1px #CACACA;
+			}
+		}
+		.alias-option{
+			.fragment{
+				margin-right: 3px;
+			}
+		}
+	}
+}

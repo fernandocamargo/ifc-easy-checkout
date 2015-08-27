@@ -1,0 +1,95 @@
+// TODO: Jeff. código repetido (ver _common.scss), verificar o que pode ser feito
+.container, .line{
+	@extend %center-block;
+	width: 100%;
+	&:after, &:before{
+		display: table;
+		content: " ";
+		clear: both;
+	}
+}
+.container{
+	max-width:$max-site-width;
+}
+
+#content{
+	padding: 40px 0;
+	min-height:400px;
+}
+body{
+	background-image:url($IMAGES_PATH+"content/background.png"); /* @meta {"sprite": {"skip": true}} */
+	background-repeat:repeat;
+}
+#main{
+	position: relative;
+}
+
+#preloader-progress{
+	&:before{
+		@extend .fa;
+		@extend %fa-cog;
+		@extend %fa-spin;
+		margin-right: 16px;
+	}
+}
+@include media("<=640px") {
+	#preloader-progress{
+		&:before{
+			clear: both;
+			margin: 0 auto 40px auto !important;
+			display: block;
+		}
+	}
+}
+.section.step{
+	float:left;
+	width: 100%;
+	display:none;
+
+	.step-active-cart &{
+		&.alias-cart{
+			display:block;
+		}
+	}
+	.step-active-auth &{
+		&.alias-cart,
+		&.alias-auth,
+		&.alias-payment{
+			display:block;
+		}
+		&.alias-payment{
+			.content-payment{
+				//display: none;	
+			}
+		}
+	}
+	.step-active-payment &{
+		&.alias-cart,
+		&.alias-auth,
+		&.alias-payment{
+			display:block;
+		}
+		&.alias-payment{
+			.content-payment{
+				display: block;
+			}
+		}
+	}
+	.step-active-confirmation &{
+		&.alias-confirmation{
+			display:block;
+		}
+	}
+}
+// extra icon
+.fa-lock:before{
+	@extend %fa-lock;
+}
+.fa-times:before{
+	@extend %fa-times;
+}
+@include media("<=320px") {
+	#content{
+		padding: 10px 0 30px;
+	}
+}

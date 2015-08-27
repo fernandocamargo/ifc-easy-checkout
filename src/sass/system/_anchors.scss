@@ -1,0 +1,69 @@
+$anchor-color-default: #3f3f3f !default;
+$anchor-color-primary: #4f8fc0 !default;
+$anchor-color-sucess: #4cae4c !default;
+$anchor-color-info: #46b8da !default;
+$anchor-color-warning: #eea236 !default;
+$anchor-color-danger: #ec1e24 !default; 
+
+a{
+	cursor: pointer;
+	display: block;
+}
+%anchor-underline-only-hover{
+	text-decoration:none;
+
+	&:hover{
+		text-decoration:underline;
+	}
+}
+.anchor_type{
+	color:$anchor-color-default;
+	display: inline-block;
+}
+.anchor{
+	@extend .anchor_type;
+}
+.anchor-{
+	&default{
+		@extend %anchor-underline-only-hover;
+		color:$anchor-color-default;
+		&:active{
+			color:darken($anchor-color-default, 10%);
+		}
+	}
+	&primary{
+		@extend %anchor-underline-only-hover;
+		color:$anchor-color-primary;
+		&:active{
+			color:darken($anchor-color-primary, 10%);
+		}
+	}
+	&sucess{
+		@extend %anchor-underline-only-hover;
+		color:$anchor-color-sucess;
+		&:active{
+			color:darken($anchor-color-sucess, 10%);
+		}
+	}
+	&info{
+		@extend %anchor-underline-only-hover;
+		color:$anchor-color-info;
+		&:active{
+			color:darken($anchor-color-info, 10%);
+		}
+	}
+	&warning{
+		@extend %anchor-underline-only-hover;
+		color:$anchor-color-warning;
+		&:active{
+			color:darken($anchor-color-warning, 10%);
+		}
+	}
+	&danger{
+		@extend %anchor-underline-only-hover;
+		color:$anchor-color-danger;
+		&:active{
+			color:darken($anchor-color-danger, 10%);
+		}
+	}
+}

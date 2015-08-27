@@ -1,0 +1,323 @@
+
+    
+    {
+    
+          
+    
+      "returnType": "BASKET",
+    
+      "persistentShoppingCart": null,
+      
+      "restorePersistentCartMessages": null,
+    
+      "shoppingCart": {
+    "baseProductTotal": 1304.00,
+    "baseProductTotalWithoutGift": 1304.00,
+    "baseSubtotal": 1304.00,
+    "couponList": [
+
+    ],
+    "couponPromotionList": [
+
+    ],
+    "freight": 0.00,
+    "freightTime": 0,
+    "lastUpdateDate": 1425972252516,
+    "persistentCartCreationDt": null,
+    "persistentCartUsed": false,
+    "postalCode": 0,
+    "productTotalWithoutCoupon": 1304.00,
+    "properties": {
+
+    },
+    "quantityItens": 2,
+    "shoppingCartLinesOrganized": [
+        {
+            "levelMain": "Produtos",
+            "shoppingCartLines": [
+                {
+                    "baseProductTotal": 1299.00,
+                    "featuredDiscount": null,
+                    "lineTotal": 1299.00,
+                    "lineTotalWithOnlyCoupon": 1299.00,
+                    "lineTotalWithoutCoupon": 1299.00,
+                    "loyaltyCreditEarningDiscountList": [
+
+                    ],
+                    "loyaltyFeaturedDiscount": null,
+                    "productDiscount": 0,
+                    "productDiscountList": [
+
+                    ],
+                    "productItem": {
+                        "brand": [
+                            "NONE"
+                        ],
+                        "description": "BANCO WIRE MUSHROOM",
+                        "filteredImagesURL": [
+                            "http://i1-cfmc-dev.a8e.net.br//mpp/banco-wire-mushroom_1898826_102568.jpg"
+                        ],
+                        "fromPrice": 1399,
+                        "imagesSize": [
+                            "ggP",
+                            "gg",
+                            "gmP",
+                            "gm",
+                            "gpP",
+                            "gp",
+                            "mggP",
+                            "mgg",
+                            "mppP",
+                            "mpp",
+                            "pgP",
+                            "pg",
+                            "pppP",
+                            "ppp",
+                            "SRCP",
+                            "SRC"
+                        ],
+                        "imagesURL": [
+                            "http://i2-cfmc-dev.a8e.net.br//gg/banco-wire-mushroom_1898829_102568.jpg",
+                            "http://i3-cfmc-dev.a8e.net.br//gg/banco-wire-mushroom_1898837_102568.jpg",
+                            "http://i4-cfmc-dev.a8e.net.br//gm/banco-wire-mushroom_1898828_102568.jpg",
+                            "http://i5-cfmc-dev.a8e.net.br//gm/banco-wire-mushroom_1898836_102568.jpg",
+                            "http://i1-cfmc-dev.a8e.net.br//gp/banco-wire-mushroom_1898831_102568.jpg",
+                            "http://i2-cfmc-dev.a8e.net.br//gp/banco-wire-mushroom_1898839_102568.jpg",
+                            "http://i4-cfmc-dev.a8e.net.br//mgg/banco-wire-mushroom_1898827_102568.jpg",
+                            "http://i5-cfmc-dev.a8e.net.br//mgg/banco-wire-mushroom_1898835_102568.jpg",
+                            "http://i1-cfmc-dev.a8e.net.br//mpp/banco-wire-mushroom_1898826_102568.jpg",
+                            "http://i2-cfmc-dev.a8e.net.br//mpp/banco-wire-mushroom_1898834_102568.jpg",
+                            "http://i2-cfmc-dev.a8e.net.br//pg/banco-wire-mushroom_1898830_102568.jpg",
+                            "http://i3-cfmc-dev.a8e.net.br//pg/banco-wire-mushroom_1898838_102568.jpg",
+                            "http://i5-cfmc-dev.a8e.net.br//ppp/banco-wire-mushroom_1898832_102568.jpg",
+                            "http://i1-cfmc-dev.a8e.net.br//ppp/banco-wire-mushroom_1898840_102568.jpg",
+                            "http://i2-cfmc-dev.a8e.net.br//SRC/banco-wire-mushroom_1898825_102568.jpg",
+                            "http://i3-cfmc-dev.a8e.net.br//SRC/banco-wire-mushroom_1898833_102568.jpg"
+                        ],
+                        "levelMainId": [
+                            "258013",
+                            "258003",
+                            "258002"
+                        ],
+                        "manufacturer": "Seletti",
+                        "maximumSellingQuantity": 5,
+                        "minimumSellingQuantity": 1,
+                        "name": "BANCO WIRE MUSHROOM ROSA CLARO",
+                        "numberOfUnit": null,
+                        "ownBrand": false,
+                        "pricePerUnit": null,
+                        "productId": "168418",
+                        "productType": "NOR",
+                        "promotional": true,
+                        "recent": false,
+                        "shortDescription": "BANCO WIRE MUSHROOM",
+                        "sku": "102568",
+                        "tags": [
+                            "103094"
+                        ],
+                        "unitOfMeasure": null,
+                        "unitPrice": 1299.0,
+                        "urlProductHome": "/produtos/mobiliar/bancos-e-pufes/banco-wire-mushroom_168418",
+                        "variableWeightFlag": "N"
+                    },
+                    "productSubtotalDiscountTotal": 0.00,
+                    "productTotal": 1299.00,
+                    "productTotalWithOnlyCoupon": 1299.00,
+                    "productTotalWithoutCoupon": 1299.00,
+                    "productUnitPrice": 1299.0,
+                    "productUnitPriceBase": 1299.0,
+                    "quantity": 1,
+                    "quantityDesired": null,
+                    "skuRelatedSbtWithStock": null,
+                    "totalLineDiscount": 0.00,
+                    "totalLineDiscountWithCoupon": 0.00,
+                    "totalLineDiscountWithoutCoupon": 0.00,
+                    "totalLoyaltyCreditEarning": 0
+                },
+                {
+                    "baseProductTotal": 5.00,
+                    "featuredDiscount": null,
+                    "lineTotal": 5.00,
+                    "lineTotalWithOnlyCoupon": 5.00,
+                    "lineTotalWithoutCoupon": 5.00,
+                    "loyaltyCreditEarningDiscountList": [
+
+                    ],
+                    "loyaltyFeaturedDiscount": null,
+                    "productDiscount": 0,
+                    "productDiscountList": [
+
+                    ],
+                    "productItem": {
+                        "brand": [
+                            "NONE"
+                        ],
+                        "description": "ESTATUETA COCKATOO BICO PRATAEDO BRANCO",
+                        "filteredImagesURL": [
+                            "http://i2-cfmc-dev.a8e.net.br//mpp/estatueta-cockatoo-bico-prataedo-branco_1958738_102585.jpg"
+                        ],
+                        "fromPrice": 10,
+                        "imagesSize": [
+                            "ggP",
+                            "gmP",
+                            "gpP",
+                            "mggP",
+                            "mppP",
+                            "pgP",
+                            "pppP",
+                            "SRCP"
+                        ],
+                        "imagesURL": [
+                            "http://i2-cfmc-dev.a8e.net.br//gg/estatueta-cockatoo-bico-prataedo-branco_1958741_102585.jpg",
+                            "http://i3-cfmc-dev.a8e.net.br//gm/estatueta-cockatoo-bico-prataedo-branco_1958740_102585.jpg",
+                            "http://i4-cfmc-dev.a8e.net.br//gp/estatueta-cockatoo-bico-prataedo-branco_1958743_102585.jpg",
+                            "http://i1-cfmc-dev.a8e.net.br//mgg/estatueta-cockatoo-bico-prataedo-branco_1958739_102585.jpg",
+                            "http://i2-cfmc-dev.a8e.net.br//mpp/estatueta-cockatoo-bico-prataedo-branco_1958738_102585.jpg",
+                            "http://i2-cfmc-dev.a8e.net.br//pg/estatueta-cockatoo-bico-prataedo-branco_1958742_102585.jpg",
+                            "http://i4-cfmc-dev.a8e.net.br//ppp/estatueta-cockatoo-bico-prataedo-branco_1958744_102585.jpg",
+                            "http://i5-cfmc-dev.a8e.net.br//SRC/estatueta-cockatoo-bico-prataedo-branco_1958737_102585.jpg"
+                        ],
+                        "levelMainId": [
+                            "258028",
+                            "258006",
+                            "258002"
+                        ],
+                        "manufacturer": "Magis",
+                        "maximumSellingQuantity": 5,
+                        "minimumSellingQuantity": 1,
+                        "name": "ESTATUETA COCKATOO BICO PRATAEDO BRANCO",
+                        "numberOfUnit": null,
+                        "ownBrand": false,
+                        "pricePerUnit": null,
+                        "productId": "168435",
+                        "productType": "NOR",
+                        "promotional": true,
+                        "recent": false,
+                        "shortDescription": "ESTATUETA COCKATOO BICO PRATAEDO BRANCO",
+                        "sku": "102585",
+                        "tags": null,
+                        "unitOfMeasure": null,
+                        "unitPrice": 5.0,
+                        "urlProductHome": "/produtos/decorar/objetos-decorativos-esculturas-e-estatuetas/estatueta-cockatoo-bico-prataedo-branco_168435",
+                        "variableWeightFlag": "N"
+                    },
+                    "productSubtotalDiscountTotal": 0.00,
+                    "productTotal": 5.00,
+                    "productTotalWithOnlyCoupon": 5.00,
+                    "productTotalWithoutCoupon": 5.00,
+                    "productUnitPrice": 5.0,
+                    "productUnitPriceBase": 5.0,
+                    "quantity": 1,
+                    "quantityDesired": null,
+                    "skuRelatedSbtWithStock": null,
+                    "totalLineDiscount": 0.00,
+                    "totalLineDiscountWithCoupon": 0.00,
+                    "totalLineDiscountWithoutCoupon": 0.00,
+                    "totalLoyaltyCreditEarning": 0
+                }
+            ]
+        }
+    ],
+    "slotSale": null,
+    "subTotalDiscount": 0.00,
+    "total": 1304.00,
+    "totalDiscount": 0.00,
+    "totalDiscountWithCoupon": 0.00,
+    "totalDiscountWithoutCoupon": 0.00,
+    "totalLoyaltyCreditEarning": 0,
+    "totalWithoutCoupon": 1304.00,
+    "totalWithoutSlot": 1304.00,
+    "worseLeadTime": 0
+},
+      
+      "selectedFreight": null,
+      
+      "freightsOptions": [
+
+],
+      
+      "selectedAddress": null,
+      
+      "selectedBuyerAddress": null,
+      
+      "customerAttributes": null,
+      
+      "customer": null,
+      
+      "loyaltyCouponTotal": 0,
+      
+      "substitutionEnabled": false,
+      
+      "loyaltyCreditEnabled": false,
+      
+      "loyaltyConsumptionEnabled": false,
+
+      "ewalletConsumptionEnabled": false,       
+      
+      "changeSlotEnabled": false,
+      
+      "cancelOrderEnabled": false,
+      
+      "complementOrderEnabled": false,            
+      
+      "listSelectedVouchers": [],
+      
+      "accountBalance": null, 
+      
+      "ewalletCouponTotal": null,
+      
+      "eMessage": null, 
+
+      "listVouchers": null,
+      
+      "orderId": {
+
+},
+     
+      "currentSlot": {
+    "bonus": 0,
+    "bonusType": "NONE",
+    "deadline": 0,
+    "endTime": 1425999600000,
+    "holiday": false,
+    "ownerId": "W_1",
+    "price": 0,
+    "promotionalPrice": 0,
+    "saleSlotDt": 1425956400000,
+    "slotAvailable": 9999,
+    "slotPurchased": 0,
+    "slotSalesId": 196234,
+    "slotSession": 0,
+    "slotTotal": 9999,
+    "smallDate": "10 mar",
+    "startTime": 1425985200000,
+    "startTimeFormatted": "08:00",
+    "weekDay": 3,
+    "weekDayString": "Terça-feira"
+},
+      
+      "isCurrentSlotSelected": false,
+      
+      "lastSelectedStore" : "",
+      
+      "userSession": {
+    "agreeTerm": false,
+    "inShopDelivery": false,
+    "paymentOptionGroupList": [
+
+    ]
+},
+      
+      "payment": null,
+      
+      "selectedShop": null,
+      
+      "messages": [
+
+],
+      
+      "status": true
+      
+    }
+  
+  

@@ -1,0 +1,246 @@
+
+
+#footer{
+	background: #000000;
+	width: 100%;
+	min-height: $site-footer-height;
+	color: #FFF;
+	font-size: 11px;
+	z-index: 10;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	.navigation.menu{
+		@extend %col-6;
+		margin-top: 35px;
+
+		.drop-content{
+			display: none;
+			position: absolute;
+			bottom:$site-footer-height;
+			width: 100%;
+			left:0;
+			right:0;
+			background: #1F1F1F;
+			.container{
+				position: relative;
+			}
+
+			.close{
+				@extend %hide-text;
+				background: #3a3a3a;
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding: 8px;
+
+				.fa{
+					text-indent:0;
+					color: #FFF;
+					font-size: 18px;
+					-webkit-font-smoothing: antialiased;
+				}
+			}
+
+		}
+
+		> .collection {
+			> .item{
+				font-size: 12px;
+				text-transform: uppercase;
+				float: left;
+				padding: 0 8px;
+				display: block;
+
+				> .anchor{
+					color:#FFF;
+					text-decoration:none;
+					position: relative;
+					display: inline-block;
+					font-size: 11px;
+					cursor: pointer;
+
+					&:after{
+						content: " ";
+						display: inline-block;
+						background-image: url($IMAGES_PATH+ "icons/menu-item-background.png");
+						width: 6px;
+						height: 5px;
+						position: absolute;
+						right: -15px;
+						top: 05px;
+					}
+				}
+				> .title{
+					
+				}
+
+				&:first-child{
+					padding-left: 0;
+				}
+
+				&.active{
+					.drop-content{
+						display: block;
+					}	
+				}
+			}
+		}
+	}
+	.navigation.sub-menu{
+		@extend %row;
+		.collection{
+			@extend %row;
+			padding: 50px 0 60px;
+		}
+		.item{
+			@extend %col-4;
+		}
+		.anchor{
+			color:#FFF;
+			text-decoration: none;
+			font-size: 11px;
+			text-transform:uppercase;
+		}
+	}
+	/* widget */
+	.payment-methods{
+		@extend %col-9;
+		text-transform: uppercase;
+		margin-top: 30px;
+
+		.title{
+			float: left;
+			margin-right: 12px;
+			margin-top: 5px;
+		}
+		.collection{
+			float: left;
+		}
+		.item{
+			@extend %hide-text;
+			float: left;
+			width: 35px;
+			height: 30px;
+			margin:0 8px 0 0;
+
+			&.boleto{
+				background-image: url($IMAGES_PATH+ "icons/ico-boleto.png");
+			}
+
+			&.master{
+				background-image: url($IMAGES_PATH+ "icons/ico-master.png");
+			}
+
+			&.amex{
+				background-image: url($IMAGES_PATH+ "icons/ico-amex.png");
+			}
+
+			&.mp{
+				background-image: url($IMAGES_PATH+ "icons/ico-mp.png");
+			}
+
+			&.dinners{
+				background-image: url($IMAGES_PATH+ "icons/ico-dinners.png");
+			}
+
+			&.visa{
+				background-image: url($IMAGES_PATH+ "icons/ico-visa.png");
+			}
+		}
+	}
+	.seals-security{
+		@extend %col-5;
+		margin-top: 20px;
+
+		.title{
+			display: none;
+		}
+		.item{
+			float: right;
+			margin-bottom: 10px;
+		}
+	}
+	.easey-checkout-logo{
+		width: 117px;
+		height: 40px;
+		//background: url($IMAGES_PATH+ "icons/ifc-eckout-icon.png") center center no-repeat; 
+		background-image: url($IMAGES_PATH+ "brand/easy-checkout-infracommerce-117x40.png");
+		background-repeat:no-repeat;
+		background-position:center;
+		margin-left: 20px;
+	}
+
+	.copyright{
+		@extend %col-20;
+		clear:both;
+		color: #525252;
+		font-size: 11px;
+		margin-top: 10px;
+	}
+	
+	.easey-checkout-logo{
+		@extend %hide-text;
+		margin-top: 4px;
+	}
+
+	@include media("<=1024px") {
+		.container{
+			padding: 0 10px 0;
+		}
+	}
+	@include media("<=960px") {
+		.seals-security{
+			text-align:center;
+			.item{
+				float: none;
+				margin: 0 auto 10px;
+			}
+		}
+	}
+	@include media("<=768px") {}
+	@include media("<=640px") {
+		text-align: center;
+		position: relative;
+		
+		.navigation{
+			&.menu{
+				@extend %col-640px-20;
+				position: relative;
+				.drop-content{
+					bottom: 52px;
+					padding-bottom: 25px;
+				}
+			}
+			&.sub-menu{
+				.item{
+					width: 100%;
+					padding:7px 0;
+				}
+			}
+		}
+		.payment-methods{
+			@extend %col-640px-20;
+			.collection, .title{
+				float:none;
+				clear:both;
+			}
+			.item{
+				display: inline-block;
+				float: none;
+			}
+		}
+		.seals-security{
+			@extend %col-640px-20;
+
+			.item{
+				width: 50%;
+				margin:5px 0;
+				float:left;
+			}
+		}
+	}
+	@include media("<=320px") {}
+}

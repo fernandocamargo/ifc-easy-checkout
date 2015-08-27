@@ -1,0 +1,46 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+body,html{
+	min-width:320px;
+}
+html {
+	height: 100%;
+}
+body{
+	position: relative;
+	min-height: 100%;
+	font-size:12px;
+	padding-bottom:$site-footer-height;
+	background:#fbfbfb;
+
+	@include media("<=960px") {
+		padding-bottom: 150px;
+	}
+	@include media("<=640px") {
+		padding:0;
+	}
+}
+body,a{
+	font-family: $font-default;
+}
+
+.container, .line{
+	@extend %center-block;
+	width:100%;
+	&:after, &:before{
+		display: table;
+  		content: " ";
+  		clear: both;
+	}
+}
+.container{
+	max-width:$max-site-width;
+}
+label{
+	cursor: pointer;
+}
+.ico{
+	@extend %hide-text;
+}
+

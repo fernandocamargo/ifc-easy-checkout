@@ -1,0 +1,193 @@
+.step-active-auth{
+	.step.alias-payment{
+		z-index: 1;
+	}
+}
+.step-active-payment{
+	.step.alias-auth{
+		> .title{
+			&:after{
+				@extend .fa;
+				@extend %fa-check-circle:before;
+				margin-left: 10px;
+
+				background: #8cb64a;
+				background: -webkit-linear-gradient(#d2e1a3, #8cb64a);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
+}
+.step.alias-payment{
+	width: 400px;
+	color:#3c3c3c;
+	margin-left:0 - $default-radius;
+	z-index: 3;
+
+	> .content{
+		border:1px solid $border-color-box-default;
+		border-radius:$default-radius;
+		background:#FFF;
+		width: 100%;
+		float: left;
+		// padding:15px;
+		//display:none;
+		//
+	}
+	> .title{
+		font-size: 20px;
+		padding: 14px 0;
+	}
+	.alias-navigation-tabs{
+		> .title{
+			display: none;
+		}
+		.item{
+			@extend %col-5;
+			text-align:center;
+			height: 94px;
+			background:#ececec;
+			color:#686868;
+			position: relative;
+			box-shadow: inset 1px -3px 7px #D0D0D0;
+
+			.anchor{
+				position: absolute;
+				top:0;
+				left:0;
+				right:0;
+				bottom:0;
+				text-decoration: none;
+			}
+			.fragment{
+				position: absolute;
+				left:0;
+				right:0;
+				bottom:14px;
+				font-size: 11px;
+				padding: 0 20px;
+				line-height: 11px;
+			}
+		}
+	}
+}
+/****** LIXO remover ****/
+.step-active-payment{
+	.step.alias-payment{
+		.alias-navigation-tabs{
+			.item{
+				&.alias-credit{
+					background: #FFF;
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+.contentToTest{
+	strong{
+		font-weight: 700;
+	}
+	ul{
+		list-style: initial;
+		padding:4px 15px;
+	}
+}
+/****** LIXO remover // END orderId	****/
+.name-widget-payment-method-credit{
+	float: left;
+	.alias-card{
+		padding:38px;
+	}
+
+	.name-number{
+		.input{
+			padding-right:42px;
+		}
+		.description{
+			position: relative;
+			display: block;
+		}
+		.alias-flag{
+			background: #E5E4E4;
+			right: 0;
+			position: absolute;
+			top: 0;
+			display: block;
+			height: 30px;
+			width: 42px;
+			font-size:10px;
+			line-height: 30px;
+		}
+	}
+	.name-value{
+		.paragraph.control, 
+		> .title,
+		.alias-action .title{
+			display: none;
+		}
+		.menu {
+			display: none;
+			margin: 20px 0 0 10px;
+			.anchor{
+				@extend .anchor-primary;
+			}
+		}
+	}
+	.name-name{}
+	.name-validity-month{}
+	.name-validity-year{}
+	.name-installment{}
+	.name-code{}
+	.name-agreement{}
+	.name-submit{}
+	
+	.input.type-text,
+	.select{
+		width: 100%;
+	}
+	.definition,
+	.quote,
+	.paragraph.control{
+		@extend %col-20;
+		padding-bottom:6px;
+
+		> .title{
+			padding-bottom: 5px;
+		}
+	}
+	.definition{
+		&.name-number{
+			@extend %col-15;
+		}
+		&.name-name,
+		&.name-installment{
+			@extend %col-11;
+		}
+		&.name-validity-month,
+		&.name-validity-year{
+			// @extend %col-4;
+			width: 19%;
+			margin-left:3%
+		}
+		&.name-validity-year{
+			margin-left:3%	
+		}
+		&.name-value{
+			@extend %col-5;
+		}
+		&.name-code{
+			@extend %col-8;
+		}
+		&.name-code{
+			margin-left:3%
+		}
+	}
+
+	.input.name-submit{
+		@extend %col-20;
+		@extend .button;
+		@extend .button-sucess;
+	}
+}

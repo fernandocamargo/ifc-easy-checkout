@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<f:view xmlns="http://www.w3.org/1999/xhtml" xmlns:a4j="http://richfaces.org/a4j" xmlns:c="http://java.sun.com/jstl/core" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:rich="http://richfaces.org/rich" xmlns:ui="http://java.sun.com/jsf/facelets" contentType="text/html" encoding="UTF-8" locale="pt_BR">
+<c:set value="${utilBean.imageUrl.replace('http://', '//')}" var="static_url"/>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<title>${componentBean.home.title}</title>
+		<meta content="${componentBean.home.metaDescription}" name="description"/>
+  		<meta content="${componentBean.home.metaKeywords}" name="keywords"/>
+	
+
+		<script>
+			window.ifcEvents = window.ifcEvents || {
+				dataLayer : [],
+				on : function(event, callback){
+					window.ifcEvents.dataLayer.push(
+						{
+							event : event,
+							callback : callback
+						}
+					);
+				}, 
+				emit : function(){}
+			};
+		</script>
+
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="pt_BR" />
+		<meta property="og:url" content="" />
+		<meta property="og:title" content="IFC Easy Checkout" />
+		<meta property="og:site_name" content="IFC Easy Checkout" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:image:type" content="" />
+		<meta property="og:image:width" content="" />
+		<meta property="og:image:height" content="" />
+
+
+		<link rel="shortcut icon" type="image/x-icon" href="${static_url}images/favicon.ico?v=$buildVersion$" />
+		<!-- <link rel="apple-touch-icon" type="image/png" href="${static_url}images/apple-touch-icon-precomposed.png?v=$buildVersion$" /> -->
+		<style id="css_inject_html"></style>
+		<link rel="stylesheet" type="text/css" href="${static_url}css/@@projectPathName/system-first-load.css?v=$buildVersion$" />
+		<link rel="stylesheet" type="text/css" href="${static_url}css/@@projectPathName/system.css?v=$buildVersion$" />
+		<link rel="stylesheet" type="text/css" href="${static_url}css/easy-checkout-custom.css?v=$buildVersion$" />
+
+		<!--[if lt IE 9]>
+			<script src="${static_url}js/@@projectPathName/html5shiv.js"></script>
+		<![endif]-->
+
+		<acec:component name="catalog-js-variables" rule="dummy"/>
+	</head>
+	<body>
+		<acec:component name="google-tag-manager-v2" rule="dummy"/>
+		<div id="viewport">
+			<header id="header">
+				<div class="container">
+					<h1 class="title brand">
+						<a class="anchor" href="${utilBean.getPropertyValue('CKOUT_CATALOG_URL')}" title="Voltar para Home">
+							${utilBean.getPropertyValue('CKOUT_TITLE')}
+						</a>
+					</h1>
+					<nav class="navigation menu">
+						<small>Etapas de sua navegação:</small>
+						<ul class="collection">
+							<li class="item cart"><a class="anchor active" href="#" title="Carrinho">1.Carrinho</a></li>
+							<li class="item payment"><a class="anchor" href="#" title="Pagamento">2.Pagamento</a></li>
+							<li class="item confirmation"><a class="anchor" href="#" title="Confirmação">3.Confirmação</a></li>
+						</ul>
+					</nav>
+					<p class="extra-text">
+						<span class="fa fa-lock"></span>
+						Compra Segura
+
+						<div class="infoUser">
+							<a href="#{utilBean.getPropertyValue('HEADER_PROFILE_URL')}" class="myProfile">Meu Perfil</a>
+							<a href="#{utilBean.getPropertyValue('HEADER_ORDERS_URL')}" class="myOrders">Meus Pedidos</a>
+						</div>
+					</p>
+
+				</div>
+			</header>
+			
+			<div id="preloader-bar">
+				<div class="preloader-head"></div>
+			</div>
+
+			<!-- <hr /> -->
+			<main id="main">
+				<div id="content" class="container">
+
+				</div>
+				<div id="preloader">
+					<p id="preloader-progress">
+						Carregando... (<span id="preloader-progress-label">0%</span>)...
+					</p>
+				</div>
+			</main>
+			<!-- <hr /> -->
+			<footer id="footer">
+				<div class="container">
+					<nav class="navigation menu">
+						<ul class="collection">
+							<li class="item">
+								<a href="#" class="anchor"><h3 class="title">Ajuda</h3></a>
+								<div class="drop-content">
+									<div class="container">
+										<nav class="navigation sub-menu">
+											<ul class="collection">
+												<li class="item"><a href="#" class="anchor">Política de Entrega</a></li>
+												<li class="item"><a href="#" class="anchor">Política de Trocas e Devolução</a></li>
+												<li class="item"><a href="#" class="anchor">Políticas de Pagamento</a></li>
+												<li class="item"><a href="#" class="anchor">Política de Garantia</a></li>
+												<li class="item"><a href="#" class="anchor">Política de Privacidade</a></li>
+											</ul>
+										</nav>
+										<a href="#" class="anchor close">
+											Fechar
+											<span class="fa fa-times"></span>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<div class="payment-methods">
+						<h3 class="title">
+							Formas de Pagamento
+						</h3>
+						<ul class="collection">
+							<li class="item boleto" title="Boleto">Boleto</li>
+							<li class="item visa" title="Visa">Visa</li>
+							<li class="item master" title="Master">Master</li>
+							<li class="item dinners" title="Dinners">Dinners</li>
+							<li class="item amex" title="American Express">American Express</li>
+							<li class="item mp" title="Mercado Pago">Mercado Pago</li>
+						</ul>
+					</div>
+					<div class="seals-security">
+						<ul class="collection">
+							<li class="item easey-checkout-logo">
+								Infracommerce Easy Checkout
+							</li>
+							<li class="item ssl-seal">
+								<img src="https://knowledge.rapidssl.com/library/VERISIGN/ALL_OTHER/Frank/RapidSSL_SEAL-90x50.gif" alt="RapidSSL Site Seal" border="0" data-preload="false" />
+							</li>
+						</ul>
+					</div>
+					<p class="copyright">
+						Copyright © <span class="year">@@year</span> Infracommerce. All Right Reserved
+					</p>
+				</div>
+			</footer>
+		</div>
+		<script src="${static_url}js/ifc-vendors-0.0.1/ifc-vendors.js?v=$buildVersion$"></script>
+		<script id="ckout-variables"> 
+			
+			window.dataLayer.push({
+				'page_family' : 'ckout'
+			});
+			window.IFC_CKOUT_VARIABLES = {
+				secondsMultiplePreload : 100,
+				timeoutAppLoad : 30, // seconds
+				storeName : 'Conceito',
+				cart : {
+					udas_visible : {
+						product 		: ["marca"],
+						sku 			: ["COR"]
+					},
+					image_size 			: 'pppP',
+					delete_persistent 	: true
+				},
+				login : {
+					<c:set value="${utilBean.getPropertyValue('CKOUT_SKIP_LOGIN_ENABLED')}" var="CKOUT_SKIP_LOGIN_ENABLED"/>
+					skip_logged : ${empty CKOUT_SKIP_LOGIN_ENABLED ? 'false' : CKOUT_SKIP_LOGIN_ENABLED} // SKIP do login no processo de compra quando o cliente ja esta logado
+				},
+				payment : {
+					<c:set value="${utilBean.getPropertyValue('CKOUT_BIN_NUMBERS')}" var="CKOUT_BIN_NUMBERS"/>
+					credit_cards_bins : ${empty CKOUT_BIN_NUMBERS ? 'false' : CKOUT_BIN_NUMBERS},
+					<c:set value="${utilBean.getPropertyValue('CKOUT_AGREE_TERM_ID')}" var="CKOUT_AGREE_TERM_ID"/>
+					agree_term_id : ${not empty CKOUT_AGREE_TERM_ID and CKOUT_AGREE_TERM_ID ne '0' ? "'".concat(CKOUT_AGREE_TERM_ID).concat("'") : 'false'},
+					<c:set value="${utilBean.getPropertyValue('ENABLE_NF_CREDIT_BILL')}" var="ENABLE_NF_CREDIT_BILL"/>
+					enable_nf_credit_bill : ${not empty CKOUT_AGREE_TERM_ID and CKOUT_AGREE_TERM_ID ne 'false' ? ENABLE_NF_CREDIT_BILL : 'false'},
+					nf_credit_bill_msg : <f:verbatim>"${(utilBean.getPropertyValue('CKOUT_NF_CREDIT_BILL_MSG') || "")}"</f:verbatim>
+				}
+			};
+		</script>
+		<acec:component name="article-with-replace" newString="utilBean.getCheckoutUrl().replace('ckout/addItems.xhtml','sserv/').replace('http://', 'https://')" oldString="'sservDomainUrl'" rule="easy-checkout-complement"/>
+		<script id="ckout-preload">
+			// <![CDATA[
+			$(document).ready(function(){
+				var _DOM = {
+					wrapper : $('body'),
+					preloader: {
+						container: $('#preloader'),
+						bar: $('#preloader-bar'),
+						brand: {
+							progress: $('#preloader-brand-progress')
+						},
+						progress: {
+							container: $('#preloader-progress'),
+							label: $('#preloader-progress-label')
+						}
+					}
+				},
+				progressLoader = function(progress){
+					progress = progress || 0;
+					var that = this;
+					_DOM.preloader.progress.label.html(progress + '%');
+					progress = progress + 10;
+					if(progress > 100){
+						setTimeout(function(){
+							_DOM.preloader.progress.container.html('Abrindo ambiente seguro ...');
+							setTimeout(function(){
+								_DOM.wrapper.addClass('app-loaded-preloader');
+							}, 30);
+						}, window.IFC_CKOUT_VARIABLES.secondsMultiplePreload);
+					}else{
+						setTimeout(function(){
+							progressLoader.call(progressLoader, progress);
+						}, window.IFC_CKOUT_VARIABLES.secondsMultiplePreload);
+					}
+					return this;
+				};
+				progressLoader.call(this, 0);
+			});
+			// ]]>
+		</script>
+		<script src="//rawgit.com/flatiron/director/master/build/director.min.js"/>
+		<script src="${static_url}js/@@ifcEventsPathName/ifc-events.js?v=$buildVersion$"></script>
+		<script src="${static_url}js/@@projectPathName/ifc-easy-checkout.js?v=$buildVersion$"></script>
+	</body>
+</html>
+</f:view>

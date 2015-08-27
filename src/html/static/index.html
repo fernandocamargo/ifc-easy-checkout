@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>IFC Easy Checkout</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="pt_BR">
+		<meta property="og:url" content="">
+		<meta property="og:title" content="IFC Easy Checkout">
+		<meta property="og:site_name" content="IFC Easy Checkout">
+		<meta property="og:description" content="">
+		<meta property="og:image" content="">
+		<meta property="og:image:type" content="">
+		<meta property="og:image:width" content="">
+		<meta property="og:image:height" content="">
+
+		<link rel="shortcut icon" type="image/x-icon" href="/htdocs/images/@@projectPathName/favicon.ico?v=$buildVersion$" />
+		<link rel="apple-touch-icon" type="image/png" href="/htdocs/images/@@projectPathName/apple-touch-icon-precomposed.png?v=$buildVersion$" />
+		<style id="css_inject_html"></style>
+		<link rel="stylesheet" type="text/css" href="/htdocs/css/@@projectPathName/system-first-load.css?v=$buildVersion$">
+		<link rel="stylesheet" type="text/css" href="/htdocs/css/@@projectPathName/system.css?v=$buildVersion$">
+		<link rel="stylesheet" type="text/css" href="/htdocs/css/@@projectPathName/store-custom.css?v=$buildVersion$">
+	</head>
+	<body>
+		<!-- test -->
+		<div id="viewport">
+			<div id="preloader" style="background: #000; bottom: 0; color: #fff; font-size: 110%; height: 100%; left: 0; position: fixed; right: 0; top: 0; width: 100%; z-index: 999;">
+				<div id="preloader-bar" style="background: #be773f; left: 0; height: 5px; position: relative; top: 0; width: 0; z-index: 1;"></div>
+				<p id="preloader-progress" style="position: relative; z-index: 1;">Carregando... (<span id="preloader-progress-label">0%</span>)...</p>
+			</div>
+			<header id="header">
+				<div class="container">
+					<h1 class="title brand">
+						<a class="anchor" href="/" title="Voltar para Home">Carrinho de compras</a>
+					</h1>
+					<nav class="navigation menu">
+						<small>Etapas de sua navegação:</small>
+						<ul class="collection">
+							<li class="item cart"><a class="anchor active" href="#" title="Carrinho">1.Carrinho</a></li>
+							<li class="item payment"><a class="anchor" href="#" title="Pagamento">2.Pagamento</a></li>
+							<li class="item confirmation"><a class="anchor" href="#" title="Confirmação">3.Confirmação</a></li>
+						</ul>
+					</nav>
+					<p class="extra-text">
+						<span class="fa fa-lock"></span>
+						Compra Segura
+					</p>
+				</div>
+			</header>
+			<!-- <hr /> -->
+			<main id="main">
+				<div id="content-example" class="container">
+					<style type="text/css" media="screen">
+						#content-example{
+							padding: 10px 0;
+						}
+						#content-example .line{
+							min-height: 40px;
+							padding: 10px 0;
+						}
+					</style>
+
+					<p class="line">
+						<label>// input[type="text"]</label>
+						<input type="text" />
+					</p>
+					<p class="line">
+						<label>// input[type="text"].loading-true</label>
+						<input type="text" class="loading-true" />
+					</p>
+					<p class="line">
+						<label>// input[type="text"][disabled]</label>
+						<input type="text" disabled="disabled" />
+					</p>
+					<p class="line">
+						<label>// input[type="text"][readonly]</label>
+						<input type="text" readonly="readonly" />
+					</p>
+					<p class="line">
+						<label>// input[type="password"]</label>
+						<input type="password" autocapitalize="off" />
+						<span>Obs: use autocapitalize="off"</span>
+					</p>
+					<p class="line">
+						<label>// input[type="number"][pattern="[0-9]*"]</label>
+						<input type="number" pattern="[0-9]*" />
+					</p>
+					<p class="line">
+						<label>// input[type="email"]</label>
+						<input type="email" autocapitalize="off" />
+						<span>Obs: use autocapitalize="off"</span>
+					</p>
+					<p class="line">
+						<label>// input[type="tel"]</label>
+						<input type="tel" />
+					</p>
+					<p class="line">
+						// a
+						<span class="line">
+							<a href="#" class="anchor">.anchor</a>
+						</span>
+						<span class="line">
+							<a href="#" class="anchor anchor-default">.anchor.anchor-default</a>
+						</span>
+						<span class="line">
+							<a href="#" class="anchor anchor-primary">.anchor.anchor-primary</a>
+						</span>
+						<span class="line">
+							<a href="#" class="anchor anchor-sucess">.anchor.anchor-sucess</a>
+						</span>
+						<span class="line">
+							<a href="#" class="anchor anchor-info">.anchor.anchor-info</a>
+						</span>
+						<span class="line">
+							<a href="#" class="anchor anchor-warning">.anchor.anchor-warning</a>
+						</span>
+						<span class="line">
+							<a href="#" class="anchor anchor-danger">.anchor.anchor-danger</a>
+						</span>
+
+						<span class="line">
+							<a href="#" class="button button-danger">.anchor.anchor-danger</a>
+						</span>
+
+						<span class="line">
+							<a href="#" class="button gp2 button-danger">.anchor.anchor-danger</a>
+						</span>
+					</p>
+					<p class="line">
+						// button - group 1
+						<span class="line">
+							<button class="button">.button</button>
+						</span>
+						<span class="line">
+							<button class="button button-default">.button.button-default</button>
+							<button class="button button-default">
+								CADASTRAR <span class="fa fa-sort-desc"></span>
+							</button>
+						</span>
+						<span class="line">
+							<button class="button button-primary">.button.button-primary</button>
+							<button class="button button-primary">
+								CADASTRAR <span class="fa fa-caret-right"></span>
+							</button>
+						</span>
+						<span class="line">
+							<button class="button button-sucess">.button.button-sucess</button>
+							<button class="button button-sucess">
+								<span class="fa fa-caret-left"></span> VOLTAR
+							</button>
+						</span>
+						<span class="line">
+							<button class="button button-info">.button.button-info</button>
+							<button class="button button-info">
+								OK <span class="fa fa-caret-right"></span>
+							</button>
+						</span>
+						<span class="line">
+							<button class="button button-warning">.button.button-warning</button>
+						</span>
+						<span class="line">
+							<button class="button button-danger">.button.button-danger</button>
+						</span>
+						<span class="line">
+							<button class="button button-black">.button.button-black</button>
+						</span>
+					</p>
+					<p class="line">
+						// button - group 2
+						<span class="line">
+							<button class="button gp2">.button.gp2</button>
+						</span>
+						<span class="line">
+							<button class="button gp2 button-default">.button.gp2.button-default</button>
+						</span>
+						<span class="line">
+							<button class="button gp2 button-primary">.button.gp2.button-primary</button>
+						</span>
+						<span class="line">
+							<button class="button gp2 button-sucess">.button.gp2.button-sucess</button>
+						</span>
+						<span class="line">
+							<button class="button gp2 button-info">.button.gp2.button-info</button>
+						</span>
+						<span class="line">
+							<button class="button gp2 button-warning">.button.gp2.button-warning</button>
+						</span>
+						<span class="line">
+							<button class="button gp2 button-danger">.button.gp2.button-danger</button>
+						</span>
+					</p>
+					<p class="line">
+						// Hints - tooltips
+
+						<div class="line">
+							<a href="#" class="anchor" title="title test" data-tooltip-content="O produto será entregue com <br />uma embalgem especial para presente." data-tooltip-opts='{"style": {"classes": "qtip-easy-ckout-hint" } }'>
+								<span class="fa fa-question-circle"></span>
+							</a>  <- Hover me
+						</div>
+						<div class="line">
+							
+							<a href="#" class="anchor" title="title test" data-tooltip-content="O produto será entregue com <br />uma embalgem especial para presente." data-tooltip-opts='{"style": {"classes": "qtip-easy-ckout-hint" } }'>
+								<span class="fa fa-question-circle"></span>
+							</a>  <- Hover me - target
+						</div>
+
+						<div class="line">
+							<a href="#" class="anchor" title="title test" data-tooltip-content=".opt-test-tooltip" data-tooltip-opts='{"style": {"classes": "qtip-easy-ckout-hint" } }'>
+								<span class="fa fa-question-circle"></span>
+							</a>  <- Hover me
+							<div class="opt-test-tooltip">Texto texto por referencia</div>
+						</div>
+						<div class="line">
+							<a href="#" class="anchor" title="teste" data-tooltip-opts='{ "show": { "event": "click" }, "style": {"classes": "qtip-rounded qtip-bootstrap" } }'>click me </a>
+						</div>
+						<div class="line">
+							<a href="#" class="anchor" title="teste" data-tooltip-opts='{ "show": { "event": "click", "modal" : { "on" : true, "escape" : true, "blur" : false} }, "hide" : {"leave" : false} , "style": {"classes": "qtip-rounded qtip-bootstrap" } }'>Click me to modal</a>
+						</div>
+						<span class="line">
+							<input type="text"  data-tooltip-opts='{ "show": { "event": "focus" }, "hide" : { "event": "blur" }, "style": { "classes": "qtip-easy-ckout-hint" } }' value="Focus and blur" title="Please enter your name" />
+						</span>
+					</p>
+				</div>
+				<div id="content" class="container">
+
+				</div>
+			</main>
+			<!-- <hr /> -->
+			<footer id="footer">
+				<div class="container">
+					<nav class="navigation menu">
+						<ul class="collection">
+							<li class="item">
+								<a href="#" class="anchor"><h3 class="title">Ajuda</h3></a>
+								<div class="drop-content">
+									<div class="container">
+										<nav class="navigation sub-menu">
+											<ul class="collection">
+												<li class="item"><a href="#" class="anchor">Política de Entrega</a></li>
+												<li class="item"><a href="#" class="anchor">Política de Trocas e Devolução</a></li>
+												<li class="item"><a href="#" class="anchor">Políticas de Pagamento</a></li>
+												<li class="item"><a href="#" class="anchor">Política de Garantia</a></li>
+												<li class="item"><a href="#" class="anchor">Política de Privacidade</a></li>
+											</ul>
+										</nav>
+										<a href="#" class="anchor close">
+											Fechar
+											<span class="fa fa-times"></span>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<div class="payment-methods">
+						<h3 class="title">
+							Formas de Pagamento
+						</h3>
+						<ul class="collection">
+							<li class="item boleto" title="Boleto">Boleto</li>
+							<li class="item visa" title="Visa">Visa</li>
+							<li class="item master" title="Master">Master</li>
+							<li class="item dinners" title="Dinners">Dinners</li>
+							<li class="item amex" title="American Express">American Express</li>
+							<li class="item mp" title="Mercado Pago">Mercado Pago</li>
+						</ul>
+					</div>
+					<div class="seals-security">
+						<ul class="collection">
+							<li class="item easey-checkout-logo">
+								Infracommerce Easy Checkout
+							</li>
+							<li class="item ssl-seal">
+								<!-- <img src="https://knowledge.rapidssl.com/library/VERISIGN/ALL_OTHER/Frank/RapidSSL_SEAL-90x50.gif" alt="RapidSSL Site Seal" border="0"> -->
+							</li>
+						</ul>
+					</div>
+					<p class="copyright">
+						Copyright &copy; <span class="year">@@year</span> Luxotica Group. All Right Reserved
+					</p>
+				</div>
+			</footer>
+		</div>
+		<script src="/htdocs/js/@@projectPathName/main.js?v=$buildVersion$"></script>
+		
+	</body>
+</html>

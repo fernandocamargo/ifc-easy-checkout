@@ -1,0 +1,318 @@
+$input-color-placeholder 	: #acacac !default;
+$input-color-default 		: #686868 !default;
+$input-color-border 		: #cfcfcf !default;
+$input-color-border-focus 	: $input-color-border !default;
+
+$input-color-shadow 		: #ededed !default;
+$input-width-shadow 		: 3px !default;
+
+$input-color-outline	    : #E1E4E3 !default;
+
+$input-color-bg			    : #FFF !default;
+
+$input-height 				: 30px !default;
+$input-radius 				: $default-radius !default;
+
+
+
+// select
+// textarea
+// input[type="text"]
+// input[type="password"]
+// input[type="datetime"]
+// input[type="datetime-local"]
+// input[type="date"]
+// input[type="month"]
+// input[type="time"]
+// input[type="week"]
+// input[type="number"]
+// input[type="email"]
+// input[type="url"]
+// input[type="search"]
+// input[type="tel"]
+// input[type="color"]{
+input{
+	&:-webkit-autofill {
+    	background-color: #FFF !important;
+	}
+}
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"]{
+	color:$input-color-default;
+	border:1px solid $input-color-border;
+	box-shadow: (0px - $input-width-shadow) 	(0px - $input-width-shadow) 1px $input-color-shadow, 
+				$input-width-shadow 			(0px - $input-width-shadow) 1px $input-color-shadow,
+				 $input-width-shadow  			$input-width-shadow 		1px $input-color-shadow,
+				(0px - $input-width-shadow)  	$input-width-shadow 		1px $input-color-shadow;
+	height: $input-height;
+	border-radius: $input-radius;
+	text-indent: 8px;
+
+	&:-webkit-autofill {
+		background-color:#FFF;
+	}
+
+	&:active, &:focus{
+		outline-color: $input-color-outline;
+		outline-offset: -3px;
+		border: 1px solid darken($input-color-border, 12%);
+	}
+}
+input[type="number"]{
+	text-align: center;
+	position: relative;
+	-moz-appearance:textfield;
+	
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button{
+		/* display: none; <- Crashes Chrome on hover */
+		-webkit-appearance: none;
+		margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+	}
+	
+	// &::-webkit-outer-spin-button, 
+	// &::-webkit-inner-spin-button {
+	// 	-webkit-appearance: none;
+	// 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA6RJREFUeNqcVktv00AQ9jp+xI7dAKVpKkpf3EDiBxUJDlQcqVTU8lSf9MIBVI6oJ/qHCgJOQB9IJS1J1daOH7GzZiaarbZWkxZWGnnjzOeZ+fbb2WXft7bMZjNQyq7LhqpV3TD0PkVROFgDrKWcHTrYdTAWxy3vd62WnPh+5roOGx6q6ksrq4sZjNWV5eePp2cSGfh+7a0Bj37EMvAZgUmGP8BSMB/M+/z1W6acM+7euY1+LllBYF/NL0yfHHsz5LYEtijjph5NCWwfBj3zUQgmpuigkilUPacgyvqHdRmGQeblF0xlyw+nHr4+D6uKIPikOQYrgw2DDdK8THN8d4V8ugbEkfFsfuPjxmoOW+7Q++nLV7myIn1UrQ5W/Mp1XD5Fo//b9cNDvve7hrS2wY6g2kiiT2ALQ9VBb6C/n0nYtF5vZHv7+x0sBh2m0nF9lD7HCUZuDuuqqqJomiQmpAWFUOKcpz93dpMgCGx6f4otlexwfGREAywGC8BiKgaxdobY7Z2UBWFoRVHELctSi6aJ2TpgWMEhVSQPlRSIfl4chnEQx9w2TdW0LBnboGTkgYldAzNRSDcpG06ZoXpDSVB59eLDIvUalAgnRrxLYO1e6i3Qmgj1omMiqqcPXBbLaTt2sGxzc/MMkGm6oAGrCaUGYRCtHeqzNMlTfxFWvGtoYu+cSj1NlP8dl8VqkN2o9LsFW6UFW8UiSvycenEd1drBQXjwp25SWxQjqQwMxNXKQB4rKkWRqXu1/RDX1Gm3OS8U1AJRYJIgjvMskOD6aJMjVeE/YsuiDV6TFIj8BCCIdi96QEQaBdFzWFRuehG2m3oZZV0UG5+UF5OQsh7qFZ3NzGEjwmdyG1Qk/vsJ4EN3STqtlPNOR+px7MlYrL4J2I5PDlsXNLUpCM5Ltm1Ft8bGEsaYKzV3IIVH2zu/FK/ZHKQWGeax0AqjidHRLIflAI62tneYHwRVrPSGWBdwjCfGx3jJskpEhydVpJN6rcBvNn/s7qrwIVPGjo+Ncse2S5SMR+usSMovnviej2t6VWraRcruiCo5b+BHBSacffr8WRzFc118l8EW6OZwisWgFgXKqFWl3W4NuduDRsaezM69TFrpi24Bxc1BYLuptyColBpASrSd4Drmbg5nDnPDNN7cf3B/TT5P6ahDytvaOSeCoC81NM1zXLezLp7va0mSYFcZomMvyOEWNF2Di51hTd6bfKfruuc6TopFgQR0wqI1/gowAEnnxFl0qI6jAAAAAElFTkSuQmCC');
+	// 	background-position: right center;
+	// 	background-repeat: no-repeat;
+	// 	min-width: 1.5em;
+ //  		max-width: 1.7em;
+	// 	width: 10%;
+	// 	border-left: 1px solid #BBB;
+	// 	opacity: .5; /* shows Spin Buttons per default (Chrome >= 39) */
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+
+	// 	&:hover, &:active{
+ //    		opacity: .8;
+ //    		cursor: pointer;
+	// 	}
+	// 	&:active, &:focus{
+	// 		outline-color: $input-color-outline;
+	// 		outline-offset: -4px;
+	// 	}
+	// }
+}
+/* - input with number using html for arrows */
+//.control.type-number,
+.control.name-quantity{
+	position: relative;
+	input{
+		padding-right: 24px;
+		text-align:center;
+		width: 100%;
+	}
+	.title{
+		display: none;
+	}
+	.collection{
+		position: absolute;
+		right:0;
+		border-left: 1px solid #BBB;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+	.alias-decrease, .alias-increase{
+		.anchor{
+			background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA6RJREFUeNqcVktv00AQ9jp+xI7dAKVpKkpf3EDiBxUJDlQcqVTU8lSf9MIBVI6oJ/qHCgJOQB9IJS1J1daOH7GzZiaarbZWkxZWGnnjzOeZ+fbb2WXft7bMZjNQyq7LhqpV3TD0PkVROFgDrKWcHTrYdTAWxy3vd62WnPh+5roOGx6q6ksrq4sZjNWV5eePp2cSGfh+7a0Bj37EMvAZgUmGP8BSMB/M+/z1W6acM+7euY1+LllBYF/NL0yfHHsz5LYEtijjph5NCWwfBj3zUQgmpuigkilUPacgyvqHdRmGQeblF0xlyw+nHr4+D6uKIPikOQYrgw2DDdK8THN8d4V8ugbEkfFsfuPjxmoOW+7Q++nLV7myIn1UrQ5W/Mp1XD5Fo//b9cNDvve7hrS2wY6g2kiiT2ALQ9VBb6C/n0nYtF5vZHv7+x0sBh2m0nF9lD7HCUZuDuuqqqJomiQmpAWFUOKcpz93dpMgCGx6f4otlexwfGREAywGC8BiKgaxdobY7Z2UBWFoRVHELctSi6aJ2TpgWMEhVSQPlRSIfl4chnEQx9w2TdW0LBnboGTkgYldAzNRSDcpG06ZoXpDSVB59eLDIvUalAgnRrxLYO1e6i3Qmgj1omMiqqcPXBbLaTt2sGxzc/MMkGm6oAGrCaUGYRCtHeqzNMlTfxFWvGtoYu+cSj1NlP8dl8VqkN2o9LsFW6UFW8UiSvycenEd1drBQXjwp25SWxQjqQwMxNXKQB4rKkWRqXu1/RDX1Gm3OS8U1AJRYJIgjvMskOD6aJMjVeE/YsuiDV6TFIj8BCCIdi96QEQaBdFzWFRuehG2m3oZZV0UG5+UF5OQsh7qFZ3NzGEjwmdyG1Qk/vsJ4EN3STqtlPNOR+px7MlYrL4J2I5PDlsXNLUpCM5Ltm1Ft8bGEsaYKzV3IIVH2zu/FK/ZHKQWGeax0AqjidHRLIflAI62tneYHwRVrPSGWBdwjCfGx3jJskpEhydVpJN6rcBvNn/s7qrwIVPGjo+Ncse2S5SMR+usSMovnviej2t6VWraRcruiCo5b+BHBSacffr8WRzFc118l8EW6OZwisWgFgXKqFWl3W4NuduDRsaezM69TFrpi24Bxc1BYLuptyColBpASrSd4Drmbg5nDnPDNN7cf3B/TT5P6ahDytvaOSeCoC81NM1zXLezLp7va0mSYFcZomMvyOEWNF2Di51hTd6bfKfruuc6TopFgQR0wqI1/gowAEnnxFl0qI6jAAAAAElFTkSuQmCC') no-repeat center;
+			opacity: 0.5;
+			text-indent: -999em;
+			margin-right: 2px;
+			position:relative;
+			width: 20px;
+			height: 15px;
+
+
+			&:hover{
+				opacity: 0.8;
+				cursor: pointer;
+				box-shadow: inset 1px 1px 5px #B6B6B6;
+			}
+			&:active{
+				outline-color: $input-color-outline;
+				outline-offset: -5px;
+				box-shadow: inset 3px 2px 5px #B6B6B6;
+			}
+		}
+	}
+	.alias-decrease{
+		.anchor{
+			background-position:right -13px;
+		}
+	}
+	.alias-increase{
+		.anchor{
+			background-position:right 6px;
+			border-bottom: 1px solid #C7C7C7;
+			margin-top: 1px;
+		}
+	}
+}
+
+/* - END input with number using html for arrows */
+
+input[type="search"] {
+	box-sizing:border-box;
+	-webkit-appearance: none;
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+	margin: 4px 4px 0;
+margin-top: 1px \9; // IE8-9
+line-height: normal;
+}
+
+// Set the height of file controls to match text inputs
+input[type="file"] {
+	display: block;
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+	display: block;
+	width: 100%;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+	height: auto;
+}
+
+// file, radio, and checkbox
+input[type="file"],
+input[type="radio"],
+input[type="checkbox"] {
+	cursor: pointer;
+	&:focus{
+
+	}
+}
+
+input[type="submit"]{
+	outline: none;
+}
+
+
+input.control{
+	&.error-true{
+		background-color:#f5f3a8;
+		border: 1px solid #C7C589;
+		
+		$colorPlaceholder : #d1c978;
+		&::-webkit-input-placeholder{
+			color: $colorPlaceholder;
+		}
+		&:-moz-placeholder{
+			color: $colorPlaceholder;
+		}
+		&::-moz-placeholder{
+			color: $colorPlaceholder;
+		}
+		&:-ms-input-placeholder {  
+			color: $colorPlaceholder;
+		}
+	}
+}
+
+input,
+select,
+textarea{
+	&[disabled],
+	&[readonly],
+	[disabled] & {
+		opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+		cursor: not-allowed;
+		background-color:lighten($input-color-border,15%); 
+	}
+}
+
+// textarea,
+// input{
+// 	&.loading-true, &.busy-true{
+// 		background: $input-color-bg url($IMAGES_PATH_DIST + "preloading.gif") no-repeat center right;
+
+// 		&.control.name-quantity{
+// 			background-position: 12px center;
+// 			color: #DDD;
+// 		}
+// 		// &:before{
+// 		// 	@extend .fa;
+// 		// 	@extend %fa-spinner:before;
+
+// 		// 	color: #929292;
+// 		// 	margin-right: 6px;
+// 		// 	margin-left: -18px;
+// 		// 	@extend .fa-spin;
+// 		// }
+// 	}
+// }
+.definition.control{
+	position: relative;
+	&.busy-true{
+		.control{
+			&:before{
+				@extend .fa;
+				@extend %fa-spinner:before;
+				@extend .fa-spin;
+
+				color: #747474;
+				margin-top: 9px;
+				right: 5px;
+				position: absolute;
+			}
+		}
+	}
+	&.type-select{
+		.select{
+			width: 100%;
+			color:$input-color-default;
+			border:1px solid $input-color-border;
+			box-shadow: (0px - $input-width-shadow) 	(0px - $input-width-shadow) 1px $input-color-shadow, 
+						$input-width-shadow 			(0px - $input-width-shadow) 1px $input-color-shadow,
+						 $input-width-shadow  			$input-width-shadow 		1px $input-color-shadow,
+						(0px - $input-width-shadow)  	$input-width-shadow 		1px $input-color-shadow;
+			height: $input-height;
+			border-radius: $input-radius;
+			text-indent: 3px;
+		}
+		.paragraph.control{
+			width: auto;
+			display: block;
+			//float: left;
+			width: 100%;
+
+			// &:after {
+			// 	content: "▼";
+			// 	position: absolute;
+			// 	top: 0;
+			// 	right: 0;
+			// 	bottom: 0;
+			// 	font-size: 60%;
+			// 	line-height: 30px;
+			// 	padding: 0 7px;
+			// 	background: #000;
+			// 	color: white;
+			// }
+		}
+		
+	}
+}

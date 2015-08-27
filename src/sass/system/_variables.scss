@@ -1,0 +1,32 @@
+// default fonts
+$font-default 		: Arial, Helvetica, sans-serif;
+
+// layout variables
+$max-site-width_int 	: 1000 !default;
+$max-site-width 		: $max-site-width_int + 0px !default;
+
+// medidas
+$default-radius				: 3px !default;
+$default-padding-box		: 15px !default;
+
+$site-footer-height		: 105px !default;
+
+// variáveis da grade
+$grid-columns			: 20;
+$grid-max-width			: $max-site-width_int / $grid-columns;
+ 
+$breakpoints: (
+  '320px': 320px,
+  '640px': 640px, 
+  '768px': 768px, 
+  '1024px': 1024px
+);
+
+// colors
+$border-color-box-default 		: #e7e7e7 !default;
+
+
+// fonts awesome
+$fa-font-path : $FONT_PATH + "font-awesome";
+
+
